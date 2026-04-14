@@ -4,18 +4,13 @@ import { Instagram, Twitter, Github, Mail } from "lucide-react";
 export function Footer() {
   return (
     <footer className="py-24 border-t border-white/5 relative overflow-hidden bg-mesh">
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-px bg-gradient-to-r from-transparent via-neon-purple to-transparent shadow-[0_0_20px_rgba(168,85,247,0.5)]" />
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-px bg-linear-to-r from-transparent via-neon-purple to-transparent shadow-[0_0_20px_rgba(168,85,247,0.5)]" />
       
       <div className="container mx-auto px-6">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-16 mb-20">
           <div className="col-span-1 md:col-span-2">
             <Link to="/" className="flex items-center gap-3 mb-8 group">
-              <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-neon-purple to-neon-blue flex items-center justify-center neon-border group-hover:rotate-12 transition-transform">
-                <span className="font-display font-black text-white text-xl">G</span>
-              </div>
-              <span className="font-display font-black text-2xl tracking-tighter text-white uppercase">
-                TECH <span className="text-neon-purple">CLUB</span>
-              </span>
+              <img className="max-h-[70px] group-hover:scale-110 group-hover:rotate-6 transition-all duration-500 drop-shadow-[0_0_20px_rgba(168,85,247,0.3)]" src="/images/navbarlogo.svg" alt="logo" />
             </Link>
             <p className="text-white/60 max-w-md text-lg leading-relaxed mb-8">
               The official technical club of Guru Nanak College. Powering creativity, technology, and technical support for a digital future.

@@ -35,9 +35,6 @@ export default function Events() {
                         className="w-full h-full object-cover group-hover/img:scale-110 transition-transform duration-700"
                         referrerPolicy="no-referrer"
                       />
-                      <div className="absolute top-6 left-6 px-4 py-2 rounded-full glass border-white/10 text-xs font-black text-neon-purple uppercase tracking-widest">
-                        {event.tag}
-                      </div>
                     </div>
                     
                     <div className="flex items-center gap-3 text-white/40 text-sm font-bold mb-4 uppercase tracking-widest">
@@ -45,8 +42,8 @@ export default function Events() {
                       {event.date}
                     </div>
                     
-                    <h3 className="text-3xl font-display font-black text-white mb-4 uppercase tracking-tighter">{event.title}</h3>
-                    <p className="text-white/60 text-lg mb-8 flex-grow leading-relaxed">
+                    <h3 className="text-3xl font-sans text-white mb-4 uppercase">{event.title}</h3>
+                    <p className="text-white/60 text-lg mb-8 grow leading-relaxed">
                       {event.description}
                     </p>
                     

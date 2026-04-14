@@ -23,13 +23,13 @@ export function SectionHeader({
         initial={{ width: 0 }}
         whileInView={{ width: "80px" }}
         viewport={{ once: true }}
-        className={`h-1 bg-gradient-to-r from-neon-purple to-neon-blue mb-6 ${align === "center" ? "mx-auto" : ""}`}
+        className={`rounded-2xl h-1 bg-linear-to-r from-neon-purple to-neon-blue mb-6 ${align === "center" ? "mx-auto" : ""}`}
       />
-      <h2 className="text-4xl md:text-6xl font-display font-black tracking-tighter text-white mb-4 uppercase">
+      <h2 className="text-4xl md:text-7xl font-display text-white mb-4 uppercase">
         {title}
       </h2>
       {subtitle && (
-        <p className="text-white/60 text-lg max-w-2xl mx-auto md:mx-0 leading-relaxed">
+        <p className="text-white/60 text-lg max-w-2xl mx-auto leading-relaxed">
           {subtitle}
         </p>
       )}
@@ -52,10 +52,10 @@ export function GlassCard({
       className={`glass rounded-3xl p-8 relative overflow-hidden group ${className}`}
     >
       {/* Subtle Inner Glow */}
-      <div className="absolute inset-0 bg-gradient-to-br from-white/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+      <div className="absolute inset-0 bg-linear-to-br from-white/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
       
       {/* Animated Border Glow */}
-      <div className="absolute -inset-px bg-gradient-to-r from-neon-purple/0 via-neon-purple/30 to-neon-purple/0 opacity-0 group-hover:opacity-100 blur-sm transition-opacity duration-500" />
+      <div className="absolute -inset-px bg-linear-to-r from-neon-purple/0 via-neon-purple/30 to-neon-purple/0 opacity-0 group-hover:opacity-100 blur-sm transition-opacity duration-500" />
       
       <div className="relative z-10">
         {children}

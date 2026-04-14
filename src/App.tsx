@@ -14,6 +14,7 @@ import Events from "./pages/Events";
 import Gallery from "./pages/Gallery";
 import Support from "./pages/Support";
 import OverallLeads from "./pages/OverallLeads";
+import Join from "./pages/Join";
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -24,31 +25,25 @@ function ScrollToTop() {
 }
 
 export default function App() {
-  const [isJoinModalOpen, setIsJoinModalOpen] = useState(false);
-
   return (
     <Router>
       <ScrollToTop />
       <div className="min-h-screen flex flex-col">
-        <Navbar onJoinClick={() => setIsJoinModalOpen(true)} />
+        <Navbar />
         
-        <div className="flex-grow">
+        <div className="grow">
           <Routes>
-            <Route path="/" element={<Home onJoinClick={() => setIsJoinModalOpen(true)} />} />
+            <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
             <Route path="/events" element={<Events />} />
             <Route path="/gallery" element={<Gallery />} />
             <Route path="/support" element={<Support />} />
             <Route path="/overall-leads" element={<OverallLeads />} />
+            <Route path="/join" element={<Join />} />
           </Routes>
         </div>
 
         <Footer />
-        
-        <JoinUsModal 
-          isOpen={isJoinModalOpen} 
-          onClose={() => setIsJoinModalOpen(false)} 
-        />
       </div>
     </Router>
   );

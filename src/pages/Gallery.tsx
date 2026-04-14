@@ -36,13 +36,15 @@ export default function Gallery() {
                       className="w-full h-auto object-cover group-hover:scale-110 transition-transform duration-1000"
                       referrerPolicy="no-referrer"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500 flex flex-col justify-end p-8">
-                      <p className="text-white font-display font-black text-2xl uppercase tracking-tighter mb-2">{image.caption}</p>
-                      <div className="flex items-center gap-2 text-neon-purple text-xs font-black uppercase tracking-widest">
+                    <div className="absolute inset-0 bg-linear-to-t from-black/90 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500 flex flex-col justify-end p-8">
+                      <p className="text-white font-sans  text-2xl uppercase tracking-tighter mb-2">
+                        {image.caption}
+                      </p>
+                      <div className="flex items-center gap-2 text-neon-purple text-xs uppercase tracking-widest">
                         <Maximize2 className="w-4 h-4" /> Expand Visual
                       </div>
                     </div>
-                    
+
                     {/* Subtle glow on hover */}
                     <div className="absolute inset-0 border-2 border-neon-purple/0 group-hover:border-neon-purple/30 transition-colors duration-500 rounded-[32px] pointer-events-none" />
                   </div>
@@ -53,7 +55,10 @@ export default function Gallery() {
         </div>
       </section>
 
-      <Dialog open={!!selectedImage} onOpenChange={() => setSelectedImage(null)}>
+      <Dialog
+        open={!!selectedImage}
+        onOpenChange={() => setSelectedImage(null)}
+      >
         <DialogContent className="max-w-6xl p-0 bg-transparent border-none overflow-hidden flex items-center justify-center">
           {selectedImage && (
             <motion.div

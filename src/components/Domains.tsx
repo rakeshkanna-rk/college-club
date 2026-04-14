@@ -17,6 +17,7 @@ export function Domains() {
         <SectionHeader
           title="Our Domains"
           subtitle="Specialized teams working together to provide comprehensive technical and creative solutions."
+          align="center"
         />
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
@@ -35,13 +36,10 @@ export function Domains() {
                     <div className="w-16 h-16 rounded-2xl bg-neon-purple/10 flex items-center justify-center mb-8 neon-border group-hover:bg-neon-purple/20 group-hover:scale-110 transition-all duration-500">
                       {IconComponent && <IconComponent className="w-8 h-8 text-neon-purple" />}
                     </div>
-                    <h3 className="text-3xl font-display font-black text-white mb-4 uppercase tracking-tighter">{domain.name}</h3>
+                    <h3 className="text-3xl font-display text-white mb-4 uppercase">{domain.name}</h3>
                     <p className="text-white/60 text-lg leading-relaxed mb-8">
                       {domain.description}
                     </p>
-                    <div className="flex items-center gap-2 text-neon-purple text-sm font-black uppercase tracking-widest opacity-0 group-hover:opacity-100 transition-all translate-x-[-10px] group-hover:translate-x-0">
-                      Explore Domain <Icons.ArrowRight className="w-4 h-4" />
-                    </div>
                   </GlassCard>
                 </TiltCard>
               </motion.div>

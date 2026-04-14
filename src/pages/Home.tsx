@@ -4,14 +4,14 @@ import { VideoMarquee } from "@/components/VideoMarquee";
 import { LatestEvents } from "@/components/LatestEvents";
 import { ClosingCTA } from "@/components/ClosingCTA";
 
-export default function Home({ onJoinClick }: { onJoinClick: () => void }) {
+export default function Home() {
   return (
     <main>
-      <Hero onJoinClick={onJoinClick} />
+      <Hero />
       <Domains />
       <VideoMarquee />
       <LatestEvents />
-      <ClosingCTA onJoinClick={onJoinClick} />
+      <ClosingCTA />
     </main>
   );
 }

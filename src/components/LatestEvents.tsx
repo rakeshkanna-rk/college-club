@@ -40,7 +40,7 @@ export function LatestEvents() {
           {/* Animated Progress Line */}
           <motion.div 
             style={{ scaleY, originY: 0 }}
-            className="absolute left-1/2 -translate-x-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-neon-purple via-neon-blue to-neon-purple hidden md:block z-20 shadow-[0_0_15px_rgba(168,85,247,0.5)]" 
+            className="absolute left-1/2 -translate-x-1/2 top-0 bottom-0 w-px bg-linear-to-b from-neon-purple via-neon-blue to-neon-purple hidden md:block z-20 shadow-[0_0_15px_rgba(168,85,247,0.5)]" 
           >
             {/* Glow Tip */}
             <motion.div 
@@ -50,7 +50,7 @@ export function LatestEvents() {
           </motion.div>
 
           <div className="space-y-32">
-            {events.map((event, index) => (
+            {events.slice(0, 3).map((event, index) => (
               <motion.div
                 key={event.id}
                 initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50 }}
@@ -70,9 +70,6 @@ export function LatestEvents() {
                           className="w-full h-full object-cover group-hover/img:scale-110 transition-transform duration-700"
                           referrerPolicy="no-referrer"
                         />
-                        <div className="absolute top-6 left-6 px-4 py-2 rounded-full glass border-white/10 text-xs font-black text-neon-purple uppercase tracking-widest">
-                          {event.tag}
-                        </div>
                       </div>
                       
                       <div className="flex items-center gap-3 text-white/40 text-sm font-bold mb-4 uppercase tracking-widest">
@@ -80,7 +77,7 @@ export function LatestEvents() {
                         {event.date}
                       </div>
                       
-                      <h3 className="text-4xl font-display font-black text-white mb-6 uppercase tracking-tighter">{event.title}</h3>
+                      <h3 className="text-4xl font-sans font-semibold text-white mb-6 uppercase">{event.title}</h3>
                       <p className="text-white/60 text-lg mb-8 leading-relaxed">
                         {event.description}
                       </p>

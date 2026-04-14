@@ -31,14 +31,12 @@ export interface Event {
   date: string;
   driveLink: string;
   image?: string;
-  tag?: string;
 }
 
 export interface Video {
   id: string;
   title: string;
   url: string;
-  thumbnail: string;
 }
 
 export interface GalleryImage {
@@ -63,7 +61,7 @@ export const domains: Domain[] = [
   {
     id: "video-editing",
     name: "Video Editing",
-    description: "Cutting, refining, and producing polished videos for a cinematic experience.",
+    description: "Cutting, refining, and producing polished videos.",
     icon: "Film",
   },
   {
@@ -81,7 +79,7 @@ export const domains: Domain[] = [
   {
     id: "documentation",
     name: "Documentation",
-    description: "Reports, records, and structured content management for all club activities.",
+    description: "Reports, records, and structured content management for club.",
     icon: "FileText",
   },
 ];
@@ -173,7 +171,6 @@ export const events: Event[] = [
     date: "March 15, 2024",
     driveLink: "#",
     image: "https://picsum.photos/seed/event1/800/450",
-    tag: "Symposium",
   },
   {
     id: "2",
@@ -182,7 +179,6 @@ export const events: Event[] = [
     date: "January 20, 2024",
     driveLink: "#",
     image: "https://picsum.photos/seed/event2/800/450",
-    tag: "Hackathon",
   },
   {
     id: "3",
@@ -191,7 +187,14 @@ export const events: Event[] = [
     date: "December 10, 2023",
     driveLink: "#",
     image: "https://picsum.photos/seed/event3/800/450",
-    tag: "Workshop",
+  },
+  {
+    id: "4",
+    title: "Design Workshop",
+    description: "A hands-on session on UI/UX principles and modern graphic design tools.",
+    date: "December 10, 2023",
+    driveLink: "#",
+    image: "https://picsum.photos/seed/event3/800/450",
   },
 ];
 
@@ -199,32 +202,27 @@ export const videos: Video[] = [
   {
     id: "1",
     title: "Tech-X Highlights",
-    url: "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
-    thumbnail: "https://picsum.photos/seed/vid1/360/640",
+    url: "/video/placeholder.mp4",
   },
   {
     id: "2",
     title: "Club Orientation 2024",
-    url: "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
-    thumbnail: "https://picsum.photos/seed/vid2/360/640",
+    url: "/video/placeholder2.mp4",
   },
   {
     id: "3",
     title: "Workshop Teaser",
-    url: "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
-    thumbnail: "https://picsum.photos/seed/vid3/360/640",
+    url: "/video/placeholder.mp4",
   },
   {
     id: "4",
     title: "Member Showcase",
-    url: "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
-    thumbnail: "https://picsum.photos/seed/vid4/360/640",
+    url: "/video/placeholder2.mp4",
   },
   {
     id: "5",
     title: "Behind the Scenes",
-    url: "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
-    thumbnail: "https://picsum.photos/seed/vid5/360/640",
+    url: "/video/placeholder.mp4",
   },
 ];
 

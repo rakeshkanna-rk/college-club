@@ -13,11 +13,11 @@ export default function About() {
     <main className="pt-32 pb-20 bg-mesh">
       {/* About Section */}
       <section className="py-20 relative overflow-hidden">
-        <motion.div 
+        <motion.div
           style={{ y }}
-          className="absolute top-0 right-0 w-[500px] h-[500px] bg-neon-purple/10 blur-[150px] -z-10" 
+          className="absolute top-0 right-0 w-[500px] h-[500px] bg-neon-purple/10 blur-[150px] -z-10"
         />
-        
+
         <div className="container mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           <motion.div
             initial={{ opacity: 0, x: -50 }}
@@ -31,13 +31,19 @@ export default function About() {
             />
             <div className="space-y-6 text-white/70 text-lg leading-relaxed">
               <p>
-                G-Tech Club is a community of passionate technologists, creators, and problem solvers. We serve as the backbone for all technical and media requirements of Guru Nanak College.
+                G-Tech Club is a community of passionate technologists,
+                creators, and problem solvers. We serve as the backbone for all
+                technical and media requirements of Guru Nanak College.
               </p>
               <p>
-                From capturing the most memorable moments of college life to building complex digital platforms, our six specialized domains work in harmony to deliver professional-grade results.
+                From capturing the most memorable moments of college life to
+                building complex digital platforms, our six specialized domains
+                work in harmony to deliver professional-grade results.
               </p>
               <p>
-                Our mission is to foster a culture of learning by doing, providing students with real-world experience in media production, software development, and event management.
+                Our mission is to foster a culture of learning by doing,
+                providing students with real-world experience in media
+                production, software development, and event management.
               </p>
             </div>
           </motion.div>
@@ -50,21 +56,22 @@ export default function About() {
           >
             <TiltCard>
               <div className="aspect-square rounded-[40px] overflow-hidden glass border border-white/10 p-4">
-                <div className="w-full h-full rounded-[32px] bg-gradient-to-br from-neon-purple/20 to-neon-blue/20 flex items-center justify-center relative overflow-hidden">
+                <div className="w-full h-full rounded-[32px] bg-linear-to-br from-neon-purple/20 to-neon-blue/20 flex items-center justify-center relative overflow-hidden">
                   {/* Abstract 3D-ish elements */}
                   <motion.div
                     animate={{ rotate: 360 }}
-                    transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
-                    className="absolute w-[150%] h-[150%] border-[1px] border-white/5 rounded-full"
+                    transition={{
+                      duration: 20,
+                      repeat: Infinity,
+                      ease: "linear",
+                    }}
+                    className="absolute w-[150%] h-[150%] border border-white/5 rounded-full"
                   />
-                  <div className="relative z-10 text-center">
-                    <span className="text-9xl font-display font-black text-white/10">GT</span>
-                    <div className="mt-4 flex flex-wrap justify-center gap-4">
-                      <div className="px-4 py-2 glass rounded-full text-xs font-bold text-neon-purple">CREATIVE</div>
-                      <div className="px-4 py-2 glass rounded-full text-xs font-bold text-neon-blue">TECHNICAL</div>
-                      <div className="px-4 py-2 glass rounded-full text-xs font-bold text-neon-violet">SUPPORT</div>
-                    </div>
-                  </div>
+                  <img
+                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 relative z-10 text-center"
+                    src="/images/gt-logo.jpg"
+                    alt="team image"
+                  />
                 </div>
               </div>
             </TiltCard>
@@ -104,39 +111,54 @@ export default function About() {
               >
                 <TiltCard>
                   <GlassCard className="p-0 border border-white/5 hover:border-neon-purple/50 overflow-hidden group">
-                    <div className="aspect-[4/5] relative overflow-hidden">
+                    <div className="aspect-4/5 relative overflow-hidden">
                       <img
                         src={lead.image}
                         alt={lead.name}
                         className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                         referrerPolicy="no-referrer"
                       />
-                      <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-80" />
-                      
+                      <div className="absolute inset-0 bg-linear-to-t from-black via-transparent to-transparent opacity-80" />
+
                       {/* Social Overlay */}
                       <div className="absolute bottom-6 left-0 right-0 flex justify-center gap-4 opacity-0 group-hover:opacity-100 transition-all translate-y-4 group-hover:translate-y-0">
                         {lead.links?.linkedin && (
-                          <a href={lead.links.linkedin} className="w-10 h-10 rounded-full glass flex items-center justify-center hover:bg-neon-blue transition-colors">
+                          <a
+                            href={lead.links.linkedin}
+                            className="w-10 h-10 rounded-full glass flex items-center justify-center hover:bg-neon-blue transition-colors"
+                          >
                             <Linkedin className="w-5 h-5" />
                           </a>
                         )}
                         {lead.links?.portfolio && (
-                          <a href={lead.links.portfolio} className="w-10 h-10 rounded-full glass flex items-center justify-center hover:bg-neon-purple transition-colors">
+                          <a
+                            href={lead.links.portfolio}
+                            className="w-10 h-10 rounded-full glass flex items-center justify-center hover:bg-neon-purple transition-colors"
+                          >
                             <Globe className="w-5 h-5" />
                           </a>
                         )}
                         {lead.links?.instagram && (
-                          <a href={lead.links.instagram} className="w-10 h-10 rounded-full glass flex items-center justify-center hover:bg-pink-500 transition-colors">
+                          <a
+                            href={lead.links.instagram}
+                            className="w-10 h-10 rounded-full glass flex items-center justify-center hover:bg-pink-500 transition-colors"
+                          >
                             <Instagram className="w-5 h-5" />
                           </a>
                         )}
                       </div>
                     </div>
-                    
+
                     <div className="p-6 text-center">
-                      <div className="text-xs font-bold text-neon-purple uppercase tracking-widest mb-2">{lead.domain}</div>
-                      <h4 className="text-2xl font-display font-bold text-white mb-1">{lead.name}</h4>
-                      <p className="text-white/40 text-sm font-medium">{lead.role}</p>
+                      <div className="text-xs  text-neon-purple uppercase mb-2">
+                        {lead.domain}
+                      </div>
+                      <h4 className="text-2xl font-sans  text-white mb-1">
+                        {lead.name}
+                      </h4>
+                      <p className="text-white/40 text-sm font-medium">
+                        {lead.role}
+                      </p>
                     </div>
                   </GlassCard>
                 </TiltCard>

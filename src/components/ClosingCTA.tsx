@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Sparkles, ArrowRight } from "lucide-react";
 
-export function ClosingCTA({ onJoinClick }: { onJoinClick: () => void }) {
+export function ClosingCTA() {
   const { scrollYProgress } = useScroll();
   const scale = useTransform(scrollYProgress, [0.8, 1], [0.9, 1]);
   const y = useTransform(scrollYProgress, [0.8, 1], [50, 0]);
@@ -32,7 +32,7 @@ export function ClosingCTA({ onJoinClick }: { onJoinClick: () => void }) {
             Join the Elite Community
           </motion.div>
 
-          <h2 className="text-6xl md:text-8xl font-display font-black tracking-tighter text-white mb-10 leading-[0.9] uppercase">
+          <h2 className="text-5xl md:text-8xl font-display text-white mb-10 leading-[0.9] uppercase">
             READY TO <span className="text-gradient drop-shadow-[0_0_30px_rgba(168,85,247,0.4)]">CREATE</span> <br /> THE FUTURE?
           </h2>
           
@@ -41,14 +41,13 @@ export function ClosingCTA({ onJoinClick }: { onJoinClick: () => void }) {
           </p>
 
           <div className="flex flex-wrap justify-center gap-8">
-            <Button
-              size="lg"
-              onClick={onJoinClick}
-              className="btn-primary px-12 py-10 rounded-2xl text-xl uppercase tracking-widest group"
+            <Link
+              to="/join"
+              className="btn-primary flex items-center gap-3 px-12 py-10 rounded-2xl text-xl uppercase tracking-widest group no-underline"
             >
               Join Us Now
               <ArrowRight className="ml-3 w-6 h-6 group-hover:translate-x-2 transition-transform" />
-            </Button>
+            </Link>
             <Button
               size="lg"
               variant="outline"

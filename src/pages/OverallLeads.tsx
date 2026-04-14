@@ -24,7 +24,7 @@ export default function OverallLeads() {
             <button
               key={archive.year}
               onClick={() => setActiveYear(archive.year)}
-              className={`px-8 py-3 rounded-full font-bold transition-all duration-300 ${
+              className={`px-8 py-3 rounded-full  transition-all duration-300 ${
                 activeYear === archive.year
                   ? "bg-neon-purple text-white glow-primary scale-105"
                   : "glass text-white/50 hover:text-white hover:bg-white/5"
@@ -55,7 +55,7 @@ export default function OverallLeads() {
                 <TiltCard>
                   <GlassCard className="h-full flex flex-col items-center text-center p-6 border-white/5 hover:border-neon-purple/50">
                     <div className="relative w-32 h-32 mb-6 group/img">
-                      <div className="absolute inset-0 bg-gradient-to-br from-neon-purple to-neon-blue rounded-2xl rotate-6 group-hover/img:rotate-12 transition-transform duration-500" />
+                      <div className="absolute inset-0 bg-linear-to-br from-neon-purple to-neon-blue rounded-2xl rotate-6 group-hover/img:rotate-12 transition-transform duration-500" />
                       <img
                         src={lead.image}
                         alt={lead.name}
@@ -64,14 +64,14 @@ export default function OverallLeads() {
                       />
                     </div>
                     
-                    <h3 className="text-xl font-display font-bold text-white mb-1">{lead.name}</h3>
-                    <p className="text-neon-purple text-xs font-bold uppercase tracking-widest mb-2">{lead.role}</p>
+                    <h3 className="text-xl font-display  text-white mb-1">{lead.name}</h3>
+                    <p className="text-neon-purple text-xs  uppercase  mb-2">{lead.role}</p>
                     <p className="text-white/40 text-sm mb-6">{lead.domain}</p>
 
                     {/* Social Links */}
-                    <div className="flex items-center gap-4 mt-auto">
+                    <div className="flex items-center justify-center gap-4 mt-auto">
                       {lead.links?.linkedin ? (
-                        <a href={lead.links.linkedin} className="text-white/40 hover:text-neon-blue transition-colors">
+                        <a href={lead.links.linkedin} className="text-white/40   hover:text-neon-blue transition-colors">
                           <Linkedin className="w-5 h-5" />
                         </a>
                       ) : null}
@@ -86,7 +86,7 @@ export default function OverallLeads() {
                         </a>
                       ) : null}
                       {!lead.links && (
-                        <span className="text-white/20 text-[10px] uppercase font-bold tracking-widest">No links available</span>
+                        <span className="text-white/20 text-[10px] uppercase  ">No links available</span>
                       )}
                     </div>
                   </GlassCard>
