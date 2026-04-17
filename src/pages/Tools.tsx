@@ -78,7 +78,7 @@ export default function Tools() {
                         </span>
                       </div>
 
-                      <h3 className="text-2xl font-display text-white mb-4 uppercase tracking-tight group-hover:text-neon-purple transition-colors">
+                      <h3 className="text-2xl font-sans text-white mb-4 uppercase group-hover:text-neon-purple transition-colors">
                         {tool.name}
                       </h3>
                       <p className="text-white/60 leading-relaxed mb-8 grow">
