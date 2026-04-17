@@ -16,6 +16,10 @@ import Support from "./pages/Support";
 import OverallLeads from "./pages/OverallLeads";
 import Join from "./pages/Join";
 import Tools from "./pages/Tools";
+import QRCodeGenerator from "./pages/tools/QRCodeGenerator";
+import ImageToPDF from "./pages/tools/ImageToPDF";
+import ImageConverter from "./pages/tools/ImageConverter";
+import Whiteboard from "./pages/tools/Whiteboard";
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -42,6 +46,10 @@ export default function App() {
             <Route path="/overall-leads" element={<OverallLeads />} />
             <Route path="/join" element={<Join />} />
             <Route path="/tools" element={<Tools />} />
+            <Route path="/tools/qr-generator" element={<QRCodeGenerator />} />
+            <Route path="/tools/image-to-pdf" element={<ImageToPDF />} />
+            <Route path="/tools/image-converter" element={<ImageConverter />} />
+            <Route path="/tools/whiteboard" element={<Whiteboard />} />
           </Routes>
         </div>
 

@@ -1,24 +1,24 @@
 import { motion } from "motion/react";
+import { Link } from "react-router-dom";
 import { tools } from "@/data/clubData";
 import { SectionHeader, GlassCard, TiltCard } from "@/components/UIElements";
 import { 
-  FolderOpen, 
+  QrCode, 
   Layout, 
-  Terminal, 
-  Award, 
+  FileText, 
+  RefreshCw, 
   Search, 
   ExternalLink,
-  Tool
 } from "lucide-react";
 import { useState } from "react";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 
 const iconMap = {
-  FolderOpen: FolderOpen,
+  QrCode: QrCode,
   Layout: Layout,
-  Terminal: Terminal,
-  Award: Award,
+  FileText: FileText,
+  RefreshCw: RefreshCw,
 };
 
 export default function Tools() {
@@ -37,7 +37,6 @@ export default function Tools() {
           <SectionHeader 
             title="The G-Tech"
             subtitle="Explore our arsenal of custom-built tools, frameworks, and digital utilities designed to empower members and streamline club operations."
-            gradient="Toolkit"
           />
 
           {/* Search Bar */}
@@ -85,13 +84,13 @@ export default function Tools() {
                         {tool.description}
                       </p>
 
-                      <Button 
-                        variant="link" 
-                        className="p-0 h-auto text-neon-purple hover:text-white uppercase tracking-widest text-xs font-bold group/btn flex items-center gap-2"
+                      <Link 
+                        to={tool.link}
+                        className="text-neon-purple hover:text-white uppercase tracking-widest text-xs font-bold group/btn flex items-center gap-2 transition-colors"
                       >
                         Access Tool 
                         <ExternalLink className="w-4 h-4 group-hover/btn:translate-x-1 group-hover/btn:-translate-y-1 transition-transform" />
-                      </Button>
+                      </Link>
                     </GlassCard>
                   </TiltCard>
                 </motion.div>

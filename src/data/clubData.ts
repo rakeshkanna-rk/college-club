@@ -271,36 +271,36 @@ export const galleryImages: GalleryImage[] = [
 
 export const tools: Tool[] = [
   {
-    id: "asset-portal",
-    name: "Asset Portal",
-    description: "Centrally managed library of high-resolution club assets, logos, and brand guidelines.",
-    icon: "FolderOpen",
-    link: "#",
-    category: "Resources"
-  },
-  {
-    id: "event-manager",
-    name: "Event Manager",
-    description: "Internal dashboard for planning, tracking, and executing technical events and workshops.",
-    icon: "Layout",
-    link: "#",
-    category: "Internal"
-  },
-  {
-    id: "gtech-cli",
-    name: "G-Tech CLI",
-    description: "command-line interface for automating club-specific workflows and student projects.",
-    icon: "Terminal",
-    link: "#",
-    category: "Software"
-  },
-  {
-    id: "cert-gen",
-    name: "Cert-Gen",
-    description: "automated system for generating and distributing verifiable event participation certificates.",
-    icon: "Award",
-    link: "#",
+    id: "qr-generator",
+    name: "QR Code Generator",
+    description: "Generate static and stylish QR codes for links, text, or Wi-Fi contacts instantly.",
+    icon: "QrCode",
+    link: "/tools/qr-generator",
     category: "Utility"
+  },
+  {
+    id: "image-to-pdf",
+    name: "Image to PDF",
+    description: "Convert multiple JPG, PNG or WEBP images into a single professional PDF document.",
+    icon: "FileText",
+    link: "/tools/image-to-pdf",
+    category: "Documents"
+  },
+  {
+    id: "image-converter",
+    name: "Image Converter",
+    description: "Easily switch between IMAGE formats like PNG to WEBP or JPEG with quality control.",
+    icon: "RefreshCw",
+    link: "/tools/image-converter",
+    category: "Graphics"
+  },
+  {
+    id: "whiteboard",
+    name: "Digital Whiteboard",
+    description: "A professional brainstorming space with shape recognition and instant export support.",
+    icon: "Layout",
+    link: "/tools/whiteboard",
+    category: "Creative"
   }
 ];
 
