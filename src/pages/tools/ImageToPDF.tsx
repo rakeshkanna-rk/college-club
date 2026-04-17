@@ -17,7 +17,7 @@ export default function ImageToPDF() {
 
   const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     if (e.target.files) {
-      const newFiles = Array.from(e.target.files).map(file => ({
+      const newFiles = Array.from(e.target.files).map((file: File) => ({
         file,
         preview: URL.createObjectURL(file)
       }));

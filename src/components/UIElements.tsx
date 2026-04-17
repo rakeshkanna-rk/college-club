@@ -4,11 +4,13 @@ import { motion, useMotionValue, useSpring, useTransform } from "motion/react";
 export function SectionHeader({ 
   title, 
   subtitle, 
+  gradient,
   align = "center",
   className = ""
 }: { 
   title: string; 
   subtitle?: string; 
+  gradient?: string;
   align?: "left" | "center";
   className?: string;
 }) {
@@ -26,7 +28,7 @@ export function SectionHeader({
         className={`rounded-2xl h-1 bg-linear-to-r from-neon-purple to-neon-blue mb-6 ${align === "center" ? "mx-auto" : ""}`}
       />
       <h2 className="text-4xl md:text-7xl font-display text-white mb-4 uppercase">
-        {title}
+        {title} {gradient && <span className="text-gradient drop-shadow-[0_0_30px_rgba(168,85,247,0.4)]">{gradient}</span>}
       </h2>
       {subtitle && (
         <p className="text-white/60 text-lg max-w-2xl mx-auto leading-relaxed">

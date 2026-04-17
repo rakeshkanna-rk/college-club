@@ -144,7 +144,7 @@
 
 @layer utilities {
   .btn-primary {
-    @apply bg-gradient-to-r from-neon-violet to-neon-purple text-white font-bold transition-all duration-300 hover:scale-105 hover:glow-primary active:scale-95;
+    @apply bg-linear-to-r from-neon-violet to-neon-purple text-white font-bold transition-all duration-300 hover:scale-105 hover:glow-primary active:scale-95;
   }
 
   .btn-secondary {

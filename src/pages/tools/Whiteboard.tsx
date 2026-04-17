@@ -186,7 +186,7 @@ export default function Whiteboard() {
             <ToolButton active={activeTool === "rect"} onClick={() => setActiveTool("rect")} icon={Square} label="Square" />
             <ToolButton active={activeTool === "circle"} onClick={() => setActiveTool("circle")} icon={Circle} label="Circle" />
             <div className="h-px w-full bg-white/10 my-2 hidden lg:block" />
-            <ToolButton active={activeTool === "eraser"} onClick={() => setActiveTool("eraser"} icon={Eraser} label="Eraser" />
+            <ToolButton active={activeTool === "eraser"} onClick={() => setActiveTool("eraser")} icon={Eraser} label="Eraser" />
             
             <div className="flex flex-col gap-4 mt-auto">
               <input 
